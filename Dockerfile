@@ -9,4 +9,5 @@ RUN npm install -g textlint &&\
     npm install -g textlint-rule-preset-ja-engineering-paper \
                    textlint-rule-preset-ja-technical-writing \
                    textlint-rule-preset-japanese
+    npm install -g npm-install-missing
 CMD ["/bin/bash"]
