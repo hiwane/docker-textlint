@@ -31,7 +31,6 @@ RUN apk add --no-cache \
     curl \
  && mkdir -p /pandoc-build && cd /pandoc-build \
  && curl -fsSL "$PANDOC_DOWNLOAD_URL" -o pandoc.tar.gz \
- && echo "$PANDOC_DOWNLOAD_SHA512  pandoc.tar.gz" | sha512sum -c - \
  && tar -xzf pandoc.tar.gz && rm -f pandoc.tar.gz \
  && ( cd pandoc-$PANDOC_VERSION && cabal update && cabal install --only-dependencies \
     && cabal configure --prefix=$PANDOC_ROOT \
@@ -42,6 +41,7 @@ RUN apk add --no-cache \
  && apk del --purge build-dependencies \
  && rm -Rf /root/.cabal/ /root/.ghc/ \
  && cd / && rm -Rf /pandoc-build
+# && echo "$PANDOC_DOWNLOAD_SHA512  pandoc.tar.gz" | sha512sum -c - \
 
 
 CMD ["/bin/bash"]
