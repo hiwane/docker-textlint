@@ -13,6 +13,8 @@ RUN npm install -g textlint regx kuromojin structured-source sentence-splitter \
 
 # INSTALL PANDOC 
 # https://github.com/portown/alpine-pandoc/blob/master/LICENSE
+ENV PATH /usr/local/pandoc/bin:$PATH
+
 ENV PANDOC_VERSION 2.7
 ENV PANDOC_DOWNLOAD_URL https://github.com/jgm/pandoc/archive/$PANDOC_VERSION.tar.gz
 ENV PANDOC_DOWNLOAD_SHA512 5830e0d8670a0bf80d9e8a84412d9f3782d5a6d9cf384fc7a853ad7f4e41a94ed51322ca73b86ad93528a7ec82eaf343704db811ece3455e68f1049761544a88
