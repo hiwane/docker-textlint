@@ -1,12 +1,12 @@
 FROM paperist/alpine-texlive-ja
 RUN apk add --update alpine-sdk
 RUN apk add nodejs nodejs-npm git
-RUN npm install -g textlint regx \
+RUN npm install -g textlint regx kuromojin structured-source sentence-splitter \
  && npm install -g textlint-plugin-latex \
                    textlint-plugin-latex2e \
  && npm install -g textlint-rule-max-ten \
-                   textlint-rule-spellcheck-tech-word \
-                   textlint-rule-no-mix-dearu-desumasu \
+                   textlint-rule-spellcheck-tech-word spellcheck-technical-word \
+                   textlint-rule-no-mix-dearu-desumasu analyze-desumasu-dearu \
  && npm install -g textlint-rule-preset-ja-engineering-paper \
                    textlint-rule-preset-ja-technical-writing \
                    textlint-rule-preset-japanese
