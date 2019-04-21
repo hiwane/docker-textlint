@@ -45,5 +45,7 @@ RUN apk add --no-cache \
  && cd / && rm -Rf /pandoc-build
 # && echo "$PANDOC_DOWNLOAD_SHA512  pandoc.tar.gz" | sha512sum -c - \
 
+# poppler
+RUN apk add poppler poppler-utils poppler-data
 
 CMD ["/bin/bash"]
