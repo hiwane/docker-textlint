@@ -7,7 +7,11 @@ RUN npm install -g textlint regx kuromojin structured-source sentence-splitter \
  && npm install -g textlint-rule-max-ten \
                    textlint-rule-spellcheck-tech-word spellcheck-technical-word \
                    textlint-rule-no-mix-dearu-desumasu analyze-desumasu-dearu \
+                   textlint-rule-date-weekday-mismatch \
+                   textlint-rule-no-dead-link \
+                   textlint-rule-write-good \
  && npm install -g textlint-rule-preset-ja-engineering-paper \
+                   textlint-rule-preset-ja-spacing \
                    textlint-rule-preset-ja-technical-writing \
                    textlint-rule-preset-japanese
 
